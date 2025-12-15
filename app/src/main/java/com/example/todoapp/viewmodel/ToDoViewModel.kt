@@ -28,6 +28,8 @@ class ToDoViewModel(application: Application) : AndroidViewModel(application) {
         }
     }.stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
+    val allTasks: StateFlow<List<ToDoItem>> = dao.getAll()
+        .stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
     fun setFilter(filter: Filter) {
         _filter.value = filter
     }
