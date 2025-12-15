@@ -38,3 +38,4 @@ local.properties
 analytics_module/.android/
 analytics_module/build/
 analytics_module/.ios/
+*.log
